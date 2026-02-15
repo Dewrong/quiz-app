@@ -1,11 +1,13 @@
 import { useState } from "react";
 
 function FinishPage({ questionBank, userAnswers, resetQuiz }) {
+  console.log(questionBank, userAnswers);
   const finalScore = getScore();
 
   function getScore() {
     let score = 0;
     userAnswers.forEach((answer, index) => {
+      debugger;
       if (answer == questionBank[index].answer) {
         score++;
       }

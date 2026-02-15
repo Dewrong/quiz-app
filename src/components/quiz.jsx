@@ -1,35 +1,13 @@
 import { useState } from "react";
 import FinishPage from "./finish-page";
 
-function Quiz() {
-  const questionBank = [
-    {
-      question: "Which is the heaviest bird listed?",
-      options: ["Common Ostritch", "Cassowary", "Emu", "Andean Condor"],
-      answer: "Common Ostritch",
-    },
-    {
-      question: "Which listed bird has the largest wingspan?",
-      options: [
-        "Common Ostritch",
-        "Wandering Albatross",
-        "Great White Pelican",
-        "Andean Condor",
-      ],
-      answer: "Wandering Albatross",
-    },
-    {
-      question: "Which listed bird has the fastest dive speed?",
-      options: [
-        "Perigrine Falcon",
-        "Golden Eagle",
-        "Frigatebird",
-        "Anna’s Hummingbird",
-      ],
-      answer: "Perigrine Falcon",
-    },
-  ];
-  const initialAnswers = [null, null, null];
+function Quiz({ questionBank }) {
+  let initialAnswersConstruct = [];
+  for (let i = 0; i < questionBank.length; i++) {
+    initialAnswersConstruct.push(null);
+  }
+
+  const initialAnswers = initialAnswersConstruct;
 
   const [userAnswers, setUserAnswers] = useState(initialAnswers);
 
@@ -46,7 +24,8 @@ function Quiz() {
   const selectedAnswer = userAnswers[currentQuestion]; // null, option
 
   function goToNext() {
-    if (currentQuestion < 2) setCurrentQuestion(currentQuestion + 1);
+    if (currentQuestion < questionBank.length - 1)
+      setCurrentQuestion(currentQuestion + 1);
     if (currentQuestion == questionBank.length - 1) {
       setQuizCompleted(true);
     }
