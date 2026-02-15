@@ -4,12 +4,12 @@ import FinishPage from "./finish-page";
 function Quiz() {
   const questionBank = [
     {
-      question: "What is the heaviest bird currently alive?",
+      question: "What is the heaviest bird listed?",
       options: ["Common Ostritch", "Cassowary", "Emu", "Andean Condor"],
       answer: "Common Ostritch",
     },
     {
-      question: "What currently alive bird has the largest wingspan?",
+      question: "What listed bird has the largest wingspan?",
       options: [
         "Common Ostritch",
         "Wandering Albatross",
@@ -19,7 +19,7 @@ function Quiz() {
       answer: "Wandering Albatross",
     },
     {
-      question: "What currently alive bird has the fastest dive speed?",
+      question: "What listed bird has the fastest dive speed?",
       options: [
         "Perigrine Falcon",
         "Golden Eagle",
