@@ -34,17 +34,15 @@ h2 {
   background: #e7ecf0;
   cursor: pointer;
   text-align: left;
-  transition:
-    background 0.3s,
-    border 0.3s;
+  transition: background 0.3s, border 0.3s;
 }
 .option:hover {
-  background: #a0c4e3;
+  background: #6e92b2;
 }
 
 .option.selected {
-  background: #90caf9;
-  border: 2px solid #42a5f5;
+  background: #5b7f9c;
+  border: 2px solid #3a6589;
 }
 
 .nav-buttons {
@@ -85,7 +83,7 @@ h2 {
 }
 
 .restart-button:hover {
-  background: #1e88e5;
+  background: #1a385379;
 }
 
 .score {

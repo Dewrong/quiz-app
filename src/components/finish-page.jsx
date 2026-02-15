@@ -7,7 +7,6 @@ function FinishPage({ questionBank, userAnswers, resetQuiz }) {
   function getScore() {
     let score = 0;
     userAnswers.forEach((answer, index) => {
-      debugger;
       if (answer == questionBank[index].answer) {
         score++;
       }

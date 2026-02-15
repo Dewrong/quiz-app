@@ -1,7 +1,13 @@
 [
   {
     "question": "Which is the heaviest bird listed?",
-    "options": ["Common Ostritch", "Cassowary", "Emu", "Andean Condor"],
+    "options": [
+      "Common Ostritch",
+      "Cassowary",
+      "Emu",
+      "Andean Condor",
+      "Check for Birds"
+    ],
     "answer": "Common Ostritch"
   },
   {
@@ -16,6 +22,16 @@
   },
   {
     "question": "Which listed bird has the fastest dive speed?",
+    "options": [
+      "Perigrine Falcon",
+      "Golden Eagle",
+      "Frigatebird",
+      "Anna’s Hummingbird"
+    ],
+    "answer": "Perigrine Falcon"
+  },
+  {
+    "question": "Another question?",
     "options": [
       "Perigrine Falcon",
       "Golden Eagle",
