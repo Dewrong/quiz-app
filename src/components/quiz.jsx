@@ -1,4 +1,5 @@
 import { useState } from "react";
+import FinishPage from "./finish-page";
 
 function Quiz() {
   const questionBank = [
@@ -38,15 +39,36 @@ function Quiz() {
     setUserAnswers(newUserAnswers);
   }
 
+  const [isQuizCompleted, setQuizCompleted] = useState(false);
+
   const [currentQuestion, setCurrentQuestion] = useState(0);
 
   const selectedAnswer = userAnswers[currentQuestion]; // null, option
 
   function goToNext() {
     if (currentQuestion < 2) setCurrentQuestion(currentQuestion + 1);
+    if (currentQuestion == questionBank.length - 1) {
+      setQuizCompleted(true);
+    }
   }
   function goToPrev() {
     if (currentQuestion > 0) setCurrentQuestion(currentQuestion - 1);
+  }
+
+  function resetQuiz() {
+    setUserAnswers(initialAnswers);
+    setQuizCompleted(false);
+    setCurrentQuestion(0);
+  }
+
+  if (isQuizCompleted == true) {
+    return (
+      <FinishPage
+        questionBank={questionBank}
+        userAnswers={userAnswers}
+        resetQuiz={resetQuiz}
+      />
+    );
   }
 
   return (
