@@ -111,3 +111,27 @@ h2 {
   background-color: #69f35c8e;
   border-style: solid;
 }
+
+.answer-partial {
+  font-size: 1.2em;
+  text-align: center;
+  border-radius: 15px;
+  border: #fffc31;
+  background-color: #f3e95c8e;
+  border-style: solid;
+}
+
+input {
+  display: block;
+  width: 95%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  background: #e7ecf0;
+  cursor: pointer;
+  text-align: left;
+  transition:
+    background 0.3s,
+    border 0.3s;
+}

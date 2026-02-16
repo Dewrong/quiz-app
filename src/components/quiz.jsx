@@ -40,6 +40,12 @@ function Quiz({ questionBank }) {
     setCurrentQuestion(0);
   }
 
+  function checkForAnswer(selectedAnswer) {
+    if (selectedAnswer != null) {
+      document.getElementById("text-input").value = selectedAnswer;
+    }
+  }
+
   if (isQuizCompleted == true) {
     return (
       <FinishPage
@@ -55,17 +61,26 @@ function Quiz({ questionBank }) {
       <div>
         <h2>Question {currentQuestion + 1}</h2>
         <p className="question">{questionBank[currentQuestion].question}</p>
-        {questionBank[currentQuestion].options.map((option) => (
-          <button
-            className={
-              "option" + (selectedAnswer === option ? " selected" : "")
-            }
-            key={currentQuestion + option}
-            onClick={() => handleSelectOption(option)}
-          >
-            {option}
-          </button>
-        ))}
+        {questionBank[currentQuestion].options ? (
+          questionBank[currentQuestion].options.map((option) => (
+            <button
+              className={
+                "option" + (selectedAnswer === option ? " selected" : "")
+              }
+              key={currentQuestion + option}
+              onClick={() => handleSelectOption(option)}
+            >
+              {option}
+            </button>
+          ))
+        ) : (
+          <input
+            id="text-input"
+            type="textbox"
+            onInput={(e) => handleSelectOption(e.target.value)}
+            defaultValue={selectedAnswer}
+          ></input>
+        )}
         <div className="nav-buttons">
           <button onClick={goToPrev} disabled={currentQuestion == 0}>
             Previous

@@ -10,6 +10,9 @@ function FinishPage({ questionBank, userAnswers, resetQuiz }) {
       if (answer == questionBank[index].answer) {
         score++;
       }
+      if (questionBank[index]?.variants?.includes(answer)) {
+        score = score + 0.5;
+      }
     });
     return score;
   }
@@ -29,18 +32,25 @@ function FinishPage({ questionBank, userAnswers, resetQuiz }) {
       {showAnswers && (
         <div id="answers">
           {userAnswers.map((answer, index) =>
-            answer !== questionBank[index].answer ? (
-              <div className="answer-incorrect">
-                For Question {index + 1}, "{questionBank[index].question}"{" "}
-                <br />
-                "You chose: "{answer}" Correct answer: "
-                {questionBank[index].answer}"
-              </div>
-            ) : (
+            answer == questionBank[index].answer ? (
               <div className="answer-correct">
                 For Question {index + 1}, "{questionBank[index].question}"{" "}
                 <br />
-                "You chose: "{answer}" Correct answer: "
+                You chose: "{answer}" Correct answer: "
+                {questionBank[index].answer}"
+              </div>
+            ) : questionBank[index]?.variants?.includes(answer) ? (
+              <div className="answer-partial">
+                For Question {index + 1}, "{questionBank[index].question}"{" "}
+                <br />
+                You were close: "{answer}" Correct answer: "
+                {questionBank[index].answer}"
+              </div>
+            ) : (
+              <div className="answer-incorrect">
+                For Question {index + 1}, "{questionBank[index].question}"{" "}
+                <br />
+                You chose: "{answer}" Correct answer: "
                 {questionBank[index].answer}"
               </div>
             ),

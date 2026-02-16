@@ -13,6 +13,11 @@
     "answer": "Roddir"
   },
   {
+    "question": "How do you spell Ryan and Ethan's last name? (case-sensitive)",
+    "answer": "Castel",
+    "variants": ["Castiel", "Kastel", "Casstel", "Casstell"]
+  },
+  {
     "question": "Who has spoken directly to the most gods?",
     "options": [
       "Roddir",
@@ -52,6 +57,11 @@
     "answer": "Giggly"
   },
   {
+    "question": "How do you spell Del's full first name? (case-sensitive)",
+    "answer": "Del'ayna",
+    "variants": ["Del'Ayna", "Del'anya", "Del'Anya", "Delanya", "del'ayna"]
+  },
+  {
     "question": "Who sent racoons to Rivercross, dooming it?",
     "options": [
       "Billy",
@@ -63,6 +73,11 @@
       "Ludwig"
     ],
     "answer": "Alya"
+  },
+  {
+    "question": "How do you spell the name of the bugbear that has Elderwalker's notes? (case-sensitive)",
+    "answer": "G'Hoth",
+    "variants": ["Gahoth", "Ga'hoth", "Ghoth"]
   },
   {
     "question": "Which member is actually a homeowner?",
