@@ -34,7 +34,9 @@ h2 {
   background: #e7ecf0;
   cursor: pointer;
   text-align: left;
-  transition: background 0.3s, border 0.3s;
+  transition:
+    background 0.3s,
+    border 0.3s;
 }
 .option:hover {
   background: #6e92b2;
@@ -90,4 +92,22 @@ h2 {
   font-size: 1.4em;
   text-align: center;
   margin: 20px 0;
+}
+
+.answer-incorrect {
+  font-size: 1.2em;
+  text-align: center;
+  border-radius: 15px;
+  border: #ff3131;
+  background-color: #f1555554;
+  border-style: solid;
+}
+
+.answer-correct {
+  font-size: 1.2em;
+  text-align: center;
+  border-radius: 15px;
+  border: #42ff31;
+  background-color: #69f35c8e;
+  border-style: solid;
 }
