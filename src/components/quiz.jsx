@@ -77,6 +77,7 @@ function Quiz({ questionBank }) {
           <input
             id="text-input"
             type="textbox"
+            autoComplete="off"
             onInput={(e) => handleSelectOption(e.target.value)}
             defaultValue={selectedAnswer}
           ></input>

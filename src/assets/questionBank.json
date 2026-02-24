@@ -1,14 +1,14 @@
 [
   {
     "question": "Which is the heaviest bird listed?",
-    "options": [
-      "Common Ostritch",
-      "Cassowary",
-      "Emu",
-      "Andean Condor",
-      "Check for Birds"
-    ],
+    "options": ["Common Ostritch", "Cassowary", "Emu", "Andean Condor"],
     "answer": "Common Ostritch"
+  },
+  {
+    "question": "What bird holds the record for North America's slowest flightspeed?",
+    "answer": "woodcock",
+    "variants": ["woodcock", "timberdoodle", "bogsucker", "brush snipe"],
+    "case-sensitive": false
   },
   {
     "question": "Which listed bird has the largest wingspan?",
@@ -31,13 +31,24 @@
     "answer": "Perigrine Falcon"
   },
   {
-    "question": "Another question?",
+    "question": "What bird is the *laughing* kingfisher of Australia?",
+    "answer": "kookaburra",
+    "variants": ["kokaburra", "kokoburra", "kookoburra"],
+    "case-sensitive": false
+  },
+  {
+    "question": "Which listed bird is the smallest?",
     "options": [
-      "Perigrine Falcon",
-      "Golden Eagle",
-      "Frigatebird",
-      "Anna’s Hummingbird"
+      "Goldcrest",
+      "Weebill",
+      "Esmeraldas Woodstar",
+      "Bee Hummingbird"
     ],
-    "answer": "Perigrine Falcon"
+    "answer": "Bee Hummingbird"
+  },
+  {
+    "question": "Which flightless bird is also classified as a parrot?",
+    "options": ["Kakapo", "Kiwi", "Rhea", "Emu"],
+    "answer": "Kakapo"
   }
 ]

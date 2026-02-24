@@ -7,6 +7,19 @@ function FinishPage({ questionBank, userAnswers, resetQuiz }) {
   function getScore() {
     let score = 0;
     userAnswers.forEach((answer, index) => {
+      //Case-insensitive
+      if (questionBank[index]?.caseSensitive == false) {
+        if (
+          answer.toLowerCase() == questionBank[index].answer.toLowerCase() &&
+          questionBank[index]?.caseSensitive == false
+        ) {
+          score++;
+        }
+        if (questionBank[index]?.variants?.includes(answer.toLowerCase())) {
+          score = score + 0.5;
+        }
+      }
+      //Case-sensitive
       if (answer == questionBank[index].answer) {
         score++;
       }
